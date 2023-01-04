@@ -14,21 +14,21 @@ public class OrderButtonTest extends MainTest {
     public void TopButtonOrder() {
         OrderFirstPage pageObject = new OrderFirstPage(driver);
         PageFactory.initElements(driver, pageObject);
-        OrderSecondPage orderPageStage2 = new OrderSecondPage(driver);
-        PageFactory.initElements(driver, orderPageStage2);
+        OrderSecondPage orderPageStageTwo = new OrderSecondPage(driver);
+        PageFactory.initElements(driver, orderPageStageTwo);
         pageObject.open();
         pageObject.clickTopButtonOrder();
         pageObject.personalDate("Иван", "Иванов", "Москва", "+79123456789");
         pageObject.clickStationValue();
         pageObject.clickNextButton();
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-        orderPageStage2.clickOrderDate();
-        orderPageStage2.clickRentPeriod();
-        orderPageStage2.clickColorScooterBlack();
-        orderPageStage2.commentForDelivery("Позвонить за 15 минут до приезда");
-        orderPageStage2.clickConfirmOrderButton();
-        orderPageStage2.clickButtonYes(); // Баг: не активна кнопка подтверждения заказа "Да"
-        boolean result = orderPageStage2.finishModalWindow.isDisplayed();
+        orderPageStageTwo.clickOrderDate();
+        orderPageStageTwo.clickRentPeriod();
+        orderPageStageTwo.clickColorScooterBlack();
+        orderPageStageTwo.commentForDelivery("Позвонить за 15 минут до приезда");
+        orderPageStageTwo.clickConfirmOrderButton();
+        orderPageStageTwo.clickButtonYes(); // Баг: не активна кнопка подтверждения заказа "Да"
+        boolean result = orderPageStageTwo.finishModalWindow.isDisplayed();
         assertTrue(result);
     }
 
@@ -38,8 +38,8 @@ public class OrderButtonTest extends MainTest {
         PageFactory.initElements(driver, mainPage);
         OrderFirstPage pageObject = new OrderFirstPage(driver);
         PageFactory.initElements(driver, pageObject);
-        OrderSecondPage orderPageStage2 = new OrderSecondPage(driver);
-        PageFactory.initElements(driver, orderPageStage2);
+        OrderSecondPage orderPageStageTwo = new OrderSecondPage(driver);
+        PageFactory.initElements(driver, orderPageStageTwo);
         pageObject.open();
         mainPage.scrollImportantQuestions();
         pageObject.clickLowButtonOrder();
@@ -47,11 +47,11 @@ public class OrderButtonTest extends MainTest {
         pageObject.clickStationValueLowButton();
         pageObject.clickNextButton();
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-        orderPageStage2.clickOrderDate2();
-        orderPageStage2.clickRentPeriod2();
-        orderPageStage2.clickColorScooterGrey();
-        orderPageStage2.commentForDelivery("Позвонить за 30 минут до приезда");
-        orderPageStage2.clickConfirmOrderButton();
-        orderPageStage2.clickButtonYes();
-        boolean result = orderPageStage2.finishModalWindow.isDisplayed();
+        orderPageStageTwo.clickOrderDateTwo();
+        orderPageStageTwo.clickRentPeriodTwo();
+        orderPageStageTwo.clickColorScooterGrey();
+        orderPageStageTwo.commentForDelivery("Позвонить за 30 минут до приезда");
+        orderPageStageTwo.clickConfirmOrderButton();
+        orderPageStageTwo.clickButtonYes();
+        boolean result = orderPageStageTwo.finishModalWindow.isDisplayed();
         assertTrue(result);    }}

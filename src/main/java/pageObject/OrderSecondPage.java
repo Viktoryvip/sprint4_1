@@ -67,7 +67,7 @@ public class OrderSecondPage {
     }
 
     //выбрать дату доставки заказа 2 через нижнюю кнопку
-    public void clickOrderDate2() {
+    public void clickOrderDateTwo() {
         orderDate.click();
         exactDate2.click();
     }
@@ -76,6 +76,6 @@ public class OrderSecondPage {
         colorScooterGrey.click();
     }
     //выбрать срок аренды для заказа 2
-    public void clickRentPeriod2() {
+    public void clickRentPeriodTwo() {
         rentPeriod.click();
         rentPeriodInDay2.click();    }}
