@@ -1,0 +1,12 @@
+# Default ignored files , .build , .target
+/workspace.xml
+
+
+# Package Files #
+*.idea
+*.target
+*.build
+*.ear
+*.zip
+*.tar.gz
+*.rar
