@@ -11,7 +11,7 @@ import static org.junit.Assert.assertTrue;
 public class OrderButtonTest extends MainTest {
 
     @Test  // заказ по верхней кнопке 1
-    public void TopButtonOrder() {
+    public void topButtonOrder() {
         OrderFirstPage pageObject = new OrderFirstPage(driver);
         PageFactory.initElements(driver, pageObject);
         OrderSecondPage orderPageStageTwo = new OrderSecondPage(driver);
